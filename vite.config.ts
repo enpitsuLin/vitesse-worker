@@ -136,7 +136,7 @@ export default defineConfig({
       filename: 'sw.ts',
       strategies: 'injectManifest',
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
+      includeAssets: ['favicon.svg', 'favicon-dark.svg', 'safari-pinned-tab.svg'],
 
       manifest: {
         name: 'Vitesse',
