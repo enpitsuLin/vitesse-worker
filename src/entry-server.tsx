@@ -1,6 +1,6 @@
 import type { HeadTag } from '@unhead/vue'
 import type { IntrinsicElementAttributes, PropType, VNode } from 'vue'
-import { defineComponent, h } from 'vue'
+import { cloneVNode, defineComponent, h } from 'vue'
 import { renderToString, renderToWebStream } from 'vue/server-renderer'
 import { serializeState } from '~/lib/state'
 import clientEntryAssets from './entry-client?assets=client'
@@ -60,12 +60,13 @@ const Template = defineComponent({
         continue
       }
       const tagPosition = tag.tagPosition || 'head'
-      schema.tags[tagPosition].push(h(tag.tag, {
-        ...tag.props,
-        innerHTML: tag.textContent ?? '',
-      }))
+      schema.tags[tagPosition].push(
+        h(tag.tag, {
+          ...tag.props,
+          innerHTML: tag.textContent ?? '',
+        }),
+      )
     }
-
     return () => (
       <html {...schema.htmlAttrs}>
         <head>
@@ -90,17 +91,16 @@ const Template = defineComponent({
             <link rel="modulepreload" crossorigin="" {...attrs} />
           ))}
           <script type="module" src={clientEntryAssets.entry} />
-          {schema.tags.head.map(tag => tag)}
+          {schema.tags.head.map(tag => cloneVNode(tag))}
         </head>
 
-        <body {...schema.bodyAttrs}>
-          {schema.tags.bodyOpen.map(tag => tag)}
+        <body {...schema.bodyAttrs} data-allow-mismatch="children">
+          {schema.tags.bodyOpen.map(tag => cloneVNode(tag))}
           <div id="app" innerHTML={content}>
-
           </div>
           <script type="application/json" id="__INITIAL_STATE__" innerHTML={serializeState(initialState) ?? ''}></script>
           <noscript> This website requires JavaScript to function properly. Please enable JavaScript to continue. </noscript>
-          {schema.tags.bodyClose.map(tag => tag)}
+          {schema.tags.bodyClose.map(tag => cloneVNode(tag))}
         </body>
       </html>
     )
@@ -116,6 +116,8 @@ export async function render(req: Request, env: Env, ctx: ExecutionContext) {
   const pathResolved = router.resolve(path)
   if (pathResolved) {
     const renderContent = {
+      teleports: {} as Record<string, string>,
+      modules: new Set<string>(),
       cloudflare: {
         env,
         ctx,
