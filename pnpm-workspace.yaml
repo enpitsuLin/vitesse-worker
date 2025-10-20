@@ -30,10 +30,7 @@ catalogs:
     '@cloudflare/vite-plugin': ^1.13.13
     '@iconify-json/carbon': ^1.2.14
     '@vue/test-utils': ^2.4.6
-    cypress: ^15.5.0
-    cypress-vite: ^1.8.0
     eslint: ^9.38.0
-    eslint-plugin-cypress: ^5.2.0
     eslint-plugin-format: ^1.0.2
     https-localhost: ^4.7.1
     lint-staged: ^16.2.4
