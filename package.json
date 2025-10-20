@@ -29,7 +29,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "catalog:dev",
     "@cloudflare/vite-plugin": "catalog:dev",
-    "@hiogawa/vite-plugin-fullstack": "^0.0.5",
+    "@hiogawa/vite-plugin-fullstack": "catalog:dev",
     "@iconify-json/carbon": "catalog:dev",
     "@intlify/unplugin-vue-i18n": "catalog:build",
     "@shikijs/markdown-it": "catalog:build",

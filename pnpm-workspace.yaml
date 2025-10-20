@@ -28,6 +28,7 @@ catalogs:
   dev:
     '@antfu/eslint-config': ^6.0.0
     '@cloudflare/vite-plugin': ^1.13.13
+    '@hiogawa/vite-plugin-fullstack': ^0.0.5
     '@iconify-json/carbon': ^1.2.14
     '@vue/test-utils': ^2.4.6
     eslint: ^9.38.0
