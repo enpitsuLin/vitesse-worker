@@ -24,6 +24,8 @@
     "vue": "catalog:frontend",
     "vue-i18n": "catalog:frontend",
     "vue-router": "catalog:frontend",
+    "workbox-precaching": "catalog:frontend",
+    "workbox-routing": "catalog:frontend",
     "workbox-window": "catalog:frontend"
   },
   "devDependencies": {

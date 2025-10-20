@@ -130,8 +130,14 @@ export default defineConfig({
 
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA({
+      scope: '/',
+      base: '/',
+      srcDir: 'src',
+      filename: 'sw.ts',
+      strategies: 'injectManifest',
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
+
       manifest: {
         name: 'Vitesse',
         short_name: 'Vitesse',
@@ -154,14 +160,6 @@ export default defineConfig({
             purpose: 'any maskable',
           },
         ],
-      },
-      workbox: {
-        // Only precache these files - html should be excluded
-        globPatterns: ['**/*.{js,css}'],
-
-        // Don't fallback on document based (e.g. `/some-page`) requests
-        // Even though this says `null` by default, I had to set this specifically to `null` to make it work
-        navigateFallback: null,
       },
     }),
 
