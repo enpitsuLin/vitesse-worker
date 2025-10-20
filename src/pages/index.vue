@@ -23,8 +23,8 @@ useHead({
       <div i-carbon-campsite inline-block />
     </div>
     <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
-        Vitesse
+      <a rel="noreferrer" href="https://github.com/enpitsuLin/vitesse-worker" target="_blank">
+        Vitesse Worker
       </a>
     </p>
     <p>
