@@ -83,7 +83,7 @@ Building full-stack web apps with <b>Vitesse Worker</b> on the edge<br>
 - [`@unhead/vue v2`](https://github.com/unjs/unhead) - manipulate document head reactively
 - [`vite-plugin-vue-devtools`](https://github.com/vuejs/devtools-next) - Designed to enhance the Vue developer experience
 - [`@cloudflare/vite-plugin`](https://github.com/cloudflare/workers-sdk/tree/main/packages/vite-plugin) - Cloudflare Workers integration for Vite
-- [`@hiogawa/vite-plugin-fullstack`](https://github.com/hi-ogawa/vite-plugins/tree/main/packages/vite-plugin-fullstack) - Full-stack development support with Vite
+- [`@hiogawa/vite-plugin-fullstack`](https://github.com/hi-ogawa/vite-plugins/tree/main/packages/fullstack) - Vite plugin developed by [@hi-ogawa](https://github.com/hi-ogawa) that implements the [Client assets metadata API for SSR proposal](https://github.com/vitejs/vite/discussions/20913). This proposal is really cool.
 
 ### Coding Style
 
@@ -123,7 +123,7 @@ pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 
 ## Checklist
 
-When you use this template, try follow the checklist to update your info properly
+When you use this template, try to follow the checklist to update your info properly
 
 - [ ] Change the author name in `LICENSE`
 - [ ] Change the title in `App.vue`

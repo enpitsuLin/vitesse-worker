@@ -83,7 +83,7 @@
 - [`@unhead/vue v2`](https://github.com/unjs/unhead) - 响应式地操作文档头信息
 - [`vite-plugin-vue-devtools`](https://github.com/vuejs/devtools-next) - 旨在增强 Vue 开发者体验
 - [`@cloudflare/vite-plugin`](https://github.com/cloudflare/workers-sdk/tree/main/packages/vite-plugin) - Vite 的 Cloudflare Workers 集成
-- [`@hiogawa/vite-plugin-fullstack`](https://github.com/hi-ogawa/vite-plugins/tree/main/packages/vite-plugin-fullstack) - Vite 的全栈开发支持
+- [`@hiogawa/vite-plugin-fullstack`](https://github.com/hi-ogawa/vite-plugins/tree/main/packages/fullstack) - 由 [@hi-ogawa](https://github.com/hi-ogawa) 开发的以支持 [SSR 的客户端资产元数据 API 提案](https://github.com/vitejs/vite/discussions/20913)的 Vite 插件，顺带说一下这个提案真的很酷。
 
 ### 编码风格
 
