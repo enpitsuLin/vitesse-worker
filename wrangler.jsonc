@@ -4,7 +4,7 @@
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "vitesse-worker",
+  "name": "vitesse",
   "main": "server.ts",
   "compatibility_date": "2025-10-01",
   "observability": {
