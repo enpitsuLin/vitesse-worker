@@ -13,7 +13,7 @@ useHead({ title: () => t('button.about') })
   <h3>{{ t('button.about') }}</h3>
 </div>
 
-[Vitesse Worker](https://github.com/enpitsuLin/vitesse-worker) is an opinionated [Vite](https://github.com/vitejs/vite) cloudflare **SSR** starter template made by [@antfu](https://github.com/antfu) for mocking apps swiftly. With **file-based routing**, **components auto importing**, **markdown support**, I18n, PWA and uses **UnoCSS** for styling and icons.
+[Vitesse Worker](https://github.com/enpitsuLin/vitesse-worker) is an opinionated [Vite](https://github.com/vitejs/vite) cloudflare **SSR** starter template made by [@enpitsulin](https://github.com/enpitsulin) for mocking apps swiftly. With **file-based routing**, **components auto importing**, **markdown support**, I18n, PWA and uses **UnoCSS** for styling and icons.
 
 ```js
 // syntax highlighting example
