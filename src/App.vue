@@ -21,6 +21,9 @@ useHead({
       href: () => preferredDark.value ? '/favicon-dark.svg' : '/favicon.svg',
     },
   ],
+  bodyAttrs: {
+    class: 'font-sans',
+  },
 })
 </script>
 
