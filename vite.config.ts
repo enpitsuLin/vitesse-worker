@@ -14,6 +14,7 @@ import Markdown from 'unplugin-vue-markdown/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
+import Inspect from 'vite-plugin-inspect'
 import { VitePWA } from 'vite-plugin-pwa'
 import Layouts from 'vite-plugin-vue-layouts'
 import 'vitest/config'
@@ -46,7 +47,7 @@ export default defineConfig({
   },
 
   plugins: [
-
+    Inspect(),
     FullStack({
       serverHandler: false,
     }),
