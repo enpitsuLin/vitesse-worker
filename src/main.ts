@@ -52,7 +52,7 @@ export async function createApp(routePath?: string) {
 
   let entryRoutePath: string | undefined
   let isFirstRoute = true
-  router.beforeEach((to, from, next) => {
+  router.beforeEach((to, _from, next) => {
     if (isFirstRoute || (entryRoutePath && entryRoutePath === to.path)) {
       // The first route is rendered in the server and its state is provided globally.
       isFirstRoute = false

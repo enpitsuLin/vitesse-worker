@@ -14,7 +14,7 @@ export interface AppContext {
     'app:after-render': (path: string, appHTML: string) => void
   }>
   /**
-   * Current router path on SSG, `undefined` on client side.
+   * Current router path on SSR, `undefined` on client side.
    */
   routePath?: string
 }
