@@ -116,7 +116,7 @@ Building full-stack web apps with <b>Vitesse Worker</b> on the edge<br>
 If you prefer to do it manually with the cleaner git history
 
 ```bash
-npx degit antfu-collective/vitesse-worker my-vitesse-worker-app
+npx degit enpitsuLin/vitesse-worker my-vitesse-worker-app
 cd my-vitesse-worker-app
 pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 ```
