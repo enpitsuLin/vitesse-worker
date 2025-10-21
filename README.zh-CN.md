@@ -130,7 +130,6 @@ pnpm i # 如果你没有安装 pnpm，可以先运行：npm install -g pnpm
 - [ ] 在 `public` 目录下修改 favicon
 - [ ] 在 `wrangler.jsonc` 中更新项目名称
 - [ ] 设置 Cloudflare 账号和 Workers
-- [ ] 删除包含资助信息的 `.github` 文件夹
 - [ ] 整理 README 并删除路由
 
 然后，尽情享受吧 :)

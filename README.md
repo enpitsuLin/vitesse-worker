@@ -130,7 +130,6 @@ When you use this template, try to follow the checklist to update your info prop
 - [ ] Change the favicon in `public`
 - [ ] Update project name in `wrangler.jsonc`
 - [ ] Setup Cloudflare account and Workers
-- [ ] Remove the `.github` folder which contains the funding info
 - [ ] Clean up the READMEs and remove routes
 
 And, enjoy :)
