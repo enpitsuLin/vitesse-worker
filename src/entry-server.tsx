@@ -111,36 +111,33 @@ export async function render(req: Request, env: Env, ctx: ExecutionContext) {
   const url = new URL(req.url)
   const path = url.pathname
 
-  const { app, head, initialState, hooks, router } = await createApp(path)
+  const { app, head, initialState, hooks } = await createApp(path)
 
-  const pathResolved = router.resolve(path)
-  if (pathResolved) {
-    const renderContent = {
-      teleports: {} as Record<string, string>,
-      modules: new Set<string>(),
-      cloudflare: {
-        env,
-        ctx,
-      },
-    }
-
-    await hooks.callHook('app:before-render', path)
-    const content = await renderToString(app, renderContent)
-    await hooks.callHook('app:after-render', path, content)
-
-    const tags = await head.resolveTags()
-
-    const stream = renderToWebStream(
-      <Template
-        tags={tags}
-        content={content}
-        initialState={initialState}
-      />,
-    )
-    return new Response(stream, {
-      headers: {
-        'content-type': 'text/html',
-      },
-    })
+  const renderContent = {
+    teleports: {} as Record<string, string>,
+    modules: new Set<string>(),
+    cloudflare: {
+      env,
+      ctx,
+    },
   }
+
+  await hooks.callHook('app:before-render', path)
+  const content = await renderToString(app, renderContent)
+  await hooks.callHook('app:after-render', path, content)
+
+  const tags = await head.resolveTags()
+
+  const stream = renderToWebStream(
+    <Template
+      tags={tags}
+      content={content}
+      initialState={initialState}
+    />,
+  )
+  return new Response(stream, {
+    headers: {
+      'content-type': 'text/html',
+    },
+  })
 }
